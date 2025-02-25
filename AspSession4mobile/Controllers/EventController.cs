@@ -13,22 +13,17 @@ namespace AspSession4mobile.Controllers
         }
         [HttpGet]
         [Route("Events")]
-        public IQueryable GetEvents()
-        {
-            var ev = from e in db.Events
-                     select new
-                     {
-                         e.IdEvent,
-                         e.EventName,
-                         e.TypeOfEvent,
-                         e.EventStatus,
-                         e.EventDescription,
-                         e.DateOfEvent,
-                         EventManagers = db.Employees.FirstOrDefault(p => p.IdEmployee.ToString() == e.EventManagers)!.IdEmployee,
-                         e.TypeOfClass
-                     };
-            return ev.AsQueryable();
+        //public IQueryable GetEvents()
+        //{
+        //    var ev = new
+        //    {
+        //        Title,
+        //        Date,
+        //        Description,
+        //        Author
+        //    }
+        //    return ev.AsQueryable();
 
-        }
+        //}
     }
 }

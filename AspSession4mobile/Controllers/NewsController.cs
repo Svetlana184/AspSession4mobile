@@ -13,5 +13,17 @@ namespace AspSession4mobile.Controllers
             this.db = db;
         }
         [Route("News")]
+        [HttpGet]
+        //public IQueryable GetNews()
+        //{
+        //    var news = new
+        //    {
+        //        Title,
+        //        Date,
+        //        Description,
+        //        Image
+        //    };
+        //    return news.AsQuerable();
+        //}
     }
 }
